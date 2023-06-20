@@ -5,8 +5,8 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cart_detail")
-public class CartDetail {
+@Table(name = "detail")
+public class Detail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -22,7 +22,7 @@ public class CartDetail {
     @JsonBackReference
     private Cart cart;
 
-    public CartDetail() {
+    public Detail() {
     }
 
     public Integer getId() {

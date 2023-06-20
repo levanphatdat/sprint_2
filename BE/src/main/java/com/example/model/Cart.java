@@ -18,7 +18,7 @@ public class Cart {
     private String datePay;
     @OneToMany (mappedBy = "cart")
     @JsonManagedReference
-    private Set<CartDetail> cartDetails;
+    private Set<Detail> details;
 
     public Cart() {
     }
@@ -63,12 +63,12 @@ public class Cart {
         this.customerName = customerName;
     }
 
-    public Set<CartDetail> getCartDetails() {
-        return cartDetails;
+    public Set<Detail> getCartDetails() {
+        return details;
     }
 
-    public void setCartDetails(Set<CartDetail> cartDetails) {
-        this.cartDetails = cartDetails;
+    public void setCartDetails(Set<Detail> details) {
+        this.details = details;
     }
 
     public String getDatePay() {
